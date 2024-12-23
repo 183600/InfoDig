@@ -41,12 +41,15 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
               text = filterSymbols(text);
             }
             let words = tokenizeText(text);
+console.log(words);
+console.log(result.list);
             // 过滤文字功能
             if (result.hasOwnProperty("list")) {
               var mywords2 = filterWords(words, result.list);
             } else {
               let mywords2 = words;
             }
+console.log(mywords2);
             let wordCountcishu = countWords(mywords2);
             let wordCount = wordCountcishu[0];
             let cishu = wordCountcishu[1];
@@ -189,4 +192,12 @@ selectElement.addEventListener("click", function () {
     );
   });
   // return true;
+});
+
+// 获取已保存设置
+chrome.storage.sync.get(["list"], function (result) {
+  if (result.list === undefined || result.list === "undefined") {
+  // 保存设置
+  chrome.storage.sync.set({ list: "的,和,中,在,或,是",switch: true }, function () {});
+  }
 });

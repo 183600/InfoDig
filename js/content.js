@@ -84,6 +84,9 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         }
 
         chrome.storage.sync.get(["switch", "list"], function (result) {
+        console.log(textContent);
+        console.log(result);
+        console.log(result.switch);
           if (result.switch) {
             text = filterSymbols(textContent);
           }
@@ -370,7 +373,8 @@ function filterWords(words, filterList) {
 
 function filterSymbols(text) {
   // console.log(text);
-  return text.replace(/[^\w\s\u4e00-\u9fa5]/g, ""); // 过滤掉所有非字母、非空格和非中文字符
+    // 使用正则表达式保留字母、空格和中文字符
+    return text.replace(/[^a-zA-Z\u4e00-\u9fa5\s]/g, '');
 }
 
 function pearsonCorrelationCoefficient(x, y) {

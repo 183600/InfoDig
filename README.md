@@ -7,3 +7,6 @@
 - 不保证此软件结果准确
 # 使用方法
 点击扩展在浏览器顶部的图标可以查看本网页频繁出现的词的词频，这时候会显示整个网页的词频的词云图，再点击选择元素单独分析，再点击网页中的列表的某个列表项可以分析这个列表项和这个列表。
+# 截图
+![查看本网页频繁出现的词的词频](_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=5931646928234263187&skey=@crypt_2a1a254_5fa4c02f1a463dd5f2672a6781f9b4dc&mmweb_appid=wx_webfilehelper.jpg "查看本网页频繁出现的词的词频")
+![分析一个列表和其中某个列表项](_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=967328343769869319&skey=@crypt_2a1a254_5fa4c02f1a463dd5f2672a6781f9b4dc&mmweb_appid=wx_webfilehelper.jpg "分析一个列表和其中某个列表项")
